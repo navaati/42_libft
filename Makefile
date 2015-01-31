@@ -1,5 +1,5 @@
 NAME = libft.a
-OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o
+OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_memchr.o
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
