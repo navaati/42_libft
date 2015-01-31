@@ -12,3 +12,7 @@ fclean: clean
 
 clean:
 	rm -f $(OBJS)
+
+re:
+	$(MAKE) fclean
+	$(MAKE) all
