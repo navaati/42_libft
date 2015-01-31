@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/24 22:20:52 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/01/31 18:48:08 by lgillot-         ###   ########.fr       */
+/*   Created: 2015/01/31 18:38:56 by lgillot-          #+#    #+#             */
+/*   Updated: 2015/01/31 18:58:53 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <string.h>
 
-# include <string.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t n);
-void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	void	*stop;
+	size_t	pos_after_stop;
 
-#endif
+	stop = ft_memchr(src, c, n);
+	pos_after_stop = stop - src + 1;
+	ft_memcpy(dst, src, stop ? pos_after_stop : n);
+	return (stop ? dst + pos_after_stop : NULL);
+}
