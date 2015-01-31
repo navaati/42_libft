@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/31 17:40:42 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/01/31 17:51:21 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/01/31 18:46:54 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	if (src > dst)
 	{
-		memcpy(dst, src, n);
+		ft_memcpy(dst, src, n);
 	}
 	else
 	{
