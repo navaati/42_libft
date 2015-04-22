@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/24 22:20:52 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/04/22 01:29:23 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/04/22 01:53:07 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strcpy(char *dst, const char *src);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
+char	*ft_strncpy(char *dst, const char *src, size_t n);
 
 #endif
