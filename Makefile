@@ -6,14 +6,14 @@
 #    By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/22 01:03:56 by lgillot-          #+#    #+#              #
-#    Updated: 2015/05/05 23:01:28 by lgillot-         ###   ########.fr        #
+#    Updated: 2015/05/05 23:50:00 by lgillot-         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
 OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o \
 	ft_memcmp.o ft_strcpy.o ft_strlen.o ft_strdup.o ft_strncpy.o ft_strcat.o \
-	ft_strncat.o ft_strnlen.o ft_strlcat.o
+	ft_strncat.o ft_strnlen.o ft_strlcat.o ft_strchr.o
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
