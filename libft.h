@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/24 22:20:52 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/07 22:59:27 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/05/07 23:01:44 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
+int		ft_isascii(int c);
 int		ft_atoi(const char *str);
 
 #endif
