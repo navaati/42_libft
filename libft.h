@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/24 22:20:52 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/07 22:40:14 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/05/07 22:57:30 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int		ft_isspace(int c);
 int		ft_isdigit(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
+int		ft_isalpha(int c);
 int		ft_atoi(const char *str);
 
 #endif
