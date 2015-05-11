@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/12 00:19:20 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/12 00:20:38 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/05/12 00:45:56 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return (ft_memalloc(size));
+	return (ft_memalloc(size + 1));
 }
