@@ -6,7 +6,7 @@
 #    By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/22 01:03:56 by lgillot-          #+#    #+#              #
-#    Updated: 2015/05/12 00:14:38 by lgillot-         ###   ########.fr        #
+#    Updated: 2015/05/12 00:22:22 by lgillot-         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,7 +16,8 @@ OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o 
 	ft_strncat.o ft_strnlen.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strstr.o \
 	ft_strnstr.o ft_strcmp.o ft_strncmp.o ft_isspace.o ft_isdigit.o ft_atoi.o \
 	ft_islower.o ft_isupper.o ft_isalpha.o ft_isalnum.o ft_isascii.o \
-	ft_isprint.o ft_tolower.o ft_toupper.o ft_memalloc.o
+	ft_isprint.o ft_tolower.o ft_toupper.o ft_memalloc.o ft_memdel.o \
+	ft_strnew.o ft_strdel.o
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
