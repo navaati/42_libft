@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/24 22:20:52 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/13 19:43:51 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/05/13 20:02:49 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,7 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putstr(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr(int n);
 
 #endif
