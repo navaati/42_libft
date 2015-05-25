@@ -1,50 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_err.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/24 22:20:52 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/10/28 02:40:01 by lgillot-         ###   ########.fr       */
+/*   Created: 2015/05/25 03:28:17 by lgillot-          #+#    #+#             */
+/*   Updated: 2015/05/25 04:09:41 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_ERR_H
+# define FT_ERR_H
 
-# include <string.h>
 # include <stdbool.h>
-# include <stdint.h>
 
 /*
-** Error handling
+** This type is usefull to signal error when returned from functions.
+** It is used like this:
+**	if (!do_something())
+**	{
+**		handle_error();
+**		return (ERR);
+**	}
+** As such, it provides an unified pattern with functions returning pointers,
+** since NULL == ERR.
 */
-# include "ft_err.h"
+typedef bool	t_err;
 
-/*
-** Byte buffers manipulation
-*/
-# include "ft_mem.h"
+# define OK 1
+# define ERR 0
 
-/*
-** String manipulation
-*/
-# include "ft_str.h"
-
-/*
-** Characters predicates and manipulation
-*/
-# include "ft_chr.h"
-
-/*
-** Number conversion
-*/
-# include "ft_num.h"
-
-/*
-** Input/output
-*/
-# include "ft_io.h"
+# define GOTO(label) goto label
 
 #endif
