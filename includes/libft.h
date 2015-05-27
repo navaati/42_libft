@@ -28,6 +28,11 @@
 # include "ft_mem.h"
 
 /*
+** Structured buffers with length
+*/
+# include "ft_buf.h"
+
+/*
 ** String manipulation
 */
 # include "ft_str.h"
