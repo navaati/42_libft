@@ -16,5 +16,8 @@
 
 void ft_putstr_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	ssize_t	unused;
+
+	unused = write(fd, s, ft_strlen(s));
+	(void)unused;
 }

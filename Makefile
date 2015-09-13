@@ -21,7 +21,6 @@ OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o 
 	ft_strmapi.o ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o \
 	ft_strsplit.o ft_itoa.o ft_putchar_fd.o ft_putchar.o ft_putstr_fd.o \
 	ft_putstr.o ft_putendl_fd.o ft_putendl.o ft_putnbr_fd.o ft_putnbr.o
-CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I includes/
 
 all: $(NAME)

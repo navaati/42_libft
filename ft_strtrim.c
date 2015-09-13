@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static t_bool	isspace(char c)
+static t_bool	is_space(char c)
 {
 	return (c == ' ' || c == '\n' || c == '\t');
 }
@@ -21,10 +21,10 @@ char			*ft_strtrim(char const *s)
 {
 	size_t	size;
 
-	while (isspace(*s))
+	while (is_space(*s))
 		s++;
 	size = ft_strlen(s);
-	while (isspace(s[size - 1]) && size > 0)
+	while (is_space(s[size - 1]) && size > 0)
 		size--;
 	return (ft_strsub(s, 0, size));
 }
