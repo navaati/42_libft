@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/06 18:31:22 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/06 21:27:09 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/10/28 02:07:42 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 #include "libft.h"
 
-static t_bool	match(const char *s, const char *prefix)
+static bool	match(const char *s, const char *prefix)
 {
 	while (*prefix)
 	{
 		if (*s != *prefix)
 		{
-			return (FALSE);
+			return (false);
 		}
 		prefix++;
 		s++;
 	}
-	return (TRUE);
+	return (true);
 }
 
-char			*ft_strstr(const char *s1, const char *s2)
+char		*ft_strstr(const char *s1, const char *s2)
 {
 	if (*s2 == '\0')
 	{

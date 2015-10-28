@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/07 22:09:59 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/07 22:23:18 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/10/28 02:02:31 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_isspace(int c)
 {
 	unsigned char	uc;
-	t_bool			r;
+	bool			r;
 
 	uc = (unsigned char)c;
 	r = uc == '\t' || uc == '\n' || uc == '\v' || uc == '\f'
