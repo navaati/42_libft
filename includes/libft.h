@@ -17,6 +17,8 @@
 # include <stdbool.h>
 # include <stdint.h>
 
+# define GOTO(label) goto label
+
 /*
 ** Byte buffers manipulation
 */
