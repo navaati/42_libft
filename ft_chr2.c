@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_chr2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/05/12 00:09:28 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/12 00:13:29 by lgillot-         ###   ########.fr       */
+/*   Created: 2015/11/19 01:28:39 by lgillot-          #+#    #+#             */
+/*   Updated: 2015/11/19 01:35:43 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdbool.h>
 
-#include "libft.h"
+#include <ft_chr.h>
 
-void	*ft_memalloc(size_t size)
+int		ft_isalnum(int c)
 {
-	void	*buf;
+	return (ft_isalpha(c) || ft_isdigit(c));
+}
 
-	buf = malloc(size);
-	if (buf)
-		ft_bzero(buf, size);
-	return (buf);
+int		ft_isascii(int c)
+{
+	return (c >= 0 && c <= 0177);
+}
+
+int		ft_isprint(int c)
+{
+	return (c >= 040 && c <= 0176);
+}
+
+int		ft_tolower(int c)
+{
+	return (ft_isupper(c) ? c + 0x20 : c);
+}
+
+int		ft_toupper(int c)
+{
+	return (ft_islower(c) ? c - 0x20 : c);
 }

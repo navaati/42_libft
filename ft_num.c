@@ -1,37 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_num.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/31 17:40:42 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/01/31 18:46:54 by lgillot-         ###   ########.fr       */
+/*   Created: 2015/11/19 02:01:28 by lgillot-          #+#    #+#             */
+/*   Updated: 2015/11/19 02:02:48 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <ft_io.h>
 
-#include "libft.h"
+#include <ft_num.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+static char	digit_to_char(long n)
 {
-	char		*dst_it;
-	const char	*src_it;
+	return ('0' + n);
+}
 
-	if (src > dst)
+void		ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
 	{
-		ft_memcpy(dst, src, n);
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n * -1, fd);
 	}
 	else
 	{
-		dst_it = dst + n - 1;
-		src_it = src + n - 1;
-		while (n)
+		if (n / 10 != 0)
 		{
-			*dst_it-- = *src_it--;
-			n--;
+			ft_putnbr_fd(n / 10, fd);
 		}
+		ft_putchar_fd(digit_to_char(n % 10), fd);
 	}
-	return (dst);
+}
+
+void		ft_putnbr(int n)
+{
+	ft_putnbr_fd(n, 1);
 }
