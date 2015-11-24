@@ -6,7 +6,7 @@
 /*   By: lgillot- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/07 22:01:23 by lgillot-          #+#    #+#             */
-/*   Updated: 2015/05/07 22:18:02 by lgillot-         ###   ########.fr       */
+/*   Updated: 2015/11/24 11:57:33 by lgillot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "libft.h"
 
-void	skip_spaces(const char **str)
+static void	skip_spaces(const char **str)
 {
 	while (ft_isspace(**str))
 	{
@@ -22,7 +22,7 @@ void	skip_spaces(const char **str)
 	}
 }
 
-int		parse_sign(const char **str)
+static int	parse_sign(const char **str)
 {
 	if (**str == '+')
 	{
@@ -37,7 +37,7 @@ int		parse_sign(const char **str)
 	return (1);
 }
 
-int		parse_digit(const char **str)
+static int	parse_digit(const char **str)
 {
 	int digit;
 
@@ -53,7 +53,7 @@ int		parse_digit(const char **str)
 	}
 }
 
-int		overflow(int sign, int old, int new)
+static int	overflow(int sign, int old, int new)
 {
 	if (sign > 0)
 	{
@@ -65,7 +65,7 @@ int		overflow(int sign, int old, int new)
 	}
 }
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int sign;
 	int	digit;
