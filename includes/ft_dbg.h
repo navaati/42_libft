@@ -13,12 +13,11 @@
 #ifndef FT_DBG_H
 # define FT_DBG_H
 
-# ifdef DEBUG
+# ifndef NDEBUG
 #  include <stdio.h>
 #  define DBG(...) (fprintf(stderr, __VA_ARGS__))
 # else
 #  define DBG(...) ((void)0)
-#  define NDEBUG
 # endif
 
 # include <assert.h>

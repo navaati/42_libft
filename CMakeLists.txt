@@ -10,4 +10,3 @@ add_library(ft
   ft_io.c ft_io2.c
   ft_num.c ft_itoa.c ft_atoi.c)
 target_include_directories(ft PUBLIC includes)
-target_compile_definitions(ft PUBLIC $<$<CONFIG:Debug>:DEBUG>)
