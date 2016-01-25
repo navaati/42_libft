@@ -18,10 +18,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	ssize_t	unused;
-
-	unused = write(fd, &c, 1);
-	(void)unused;
+	ft_fwrite(fd, &c, 1);
 }
 
 void	ft_putchar(char c)
@@ -31,10 +28,7 @@ void	ft_putchar(char c)
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	ssize_t	unused;
-
-	unused = write(fd, s, ft_strlen(s));
-	(void)unused;
+	ft_fwrite(fd, s, ft_strlen(s));
 }
 
 void	ft_putstr(char const *s)
