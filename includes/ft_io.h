@@ -13,11 +13,15 @@
 #ifndef FT_IO_H
 # define FT_IO_H
 
+# include <libft.h>
+
 void	ft_putchar_fd(char c, int fd);
 void	ft_putchar(char c);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putstr(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
+t_err	ft_fread(int fd, void *buf, size_t len);
+t_err	ft_fwrite(int fd, const void *buf, size_t len);
 
 #endif
