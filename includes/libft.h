@@ -43,6 +43,11 @@
 # include "ft_num.h"
 
 /*
+** Endianness conversion
+*/
+# include "ft_endian.h"
+
+/*
 ** Input/output
 */
 # include "ft_io.h"
