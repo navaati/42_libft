@@ -48,6 +48,11 @@
 # include "ft_endian.h"
 
 /*
+** Parsing combinators
+*/
+# include "ft_parse.h"
+
+/*
 ** Input/output
 */
 # include "ft_io.h"
