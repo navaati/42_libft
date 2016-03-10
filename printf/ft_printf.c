@@ -33,7 +33,8 @@ static int	literal(int fd, t_parse_in fmt)
 	len = 0;
 	while ((*fmt)[len] && (*fmt)[len] != '%')
 		len++;
-	ft_fwrite(fd, *fmt, len);
+	if (!ft_fwrite(fd, *fmt, len))
+		return (-1);
 	*fmt += len;
 	return (len);
 }

@@ -41,13 +41,9 @@ static int	print_hex(int fd, t_params params, va_list ap)
 		n >>= 4;
 	}
 	if (len == 0)
-	{
-		ft_fwrite(fd, "0", 1);
-		len = 1;
-	}
+		return (ft_fwrite(fd, "0", 1) ? 1 : -1);
 	else
-		ft_fwrite(fd, &buf[16 - len], len);
-	return (len);
+		return (ft_fwrite(fd, &buf[16 - len], len) ? len : -1);
 }
 
 static int	print_string(int fd, t_params params, va_list ap)
@@ -59,8 +55,7 @@ static int	print_string(int fd, t_params params, va_list ap)
 		return (-1);
 	str = va_arg(ap, char *);
 	len = ft_strlen(str);
-	ft_fwrite(fd, str, len);
-	return (len);
+	return (ft_fwrite(fd, str, len) ? len : -1);
 }
 
 static int	print_percent(int fd, t_params params, va_list ap)
@@ -68,8 +63,7 @@ static int	print_percent(int fd, t_params params, va_list ap)
 	(void)ap;
 	if (params.len_modifier != LEN_MOD_NONE)
 		return (-1);
-	ft_fwrite(fd, "%", 1);
-	return (1);
+	return (ft_fwrite(fd, "%", 1) ? 1 : -1);
 }
 
 const t_specifier	g_spec_table[] = {
