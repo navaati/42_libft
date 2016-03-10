@@ -58,6 +58,11 @@
 # include "ft_io.h"
 
 /*
+** Printf
+*/
+# include "ft_printf.h"
+
+/*
 ** Debugging
 */
 # include "ft_dbg.h"

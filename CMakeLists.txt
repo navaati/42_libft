@@ -9,5 +9,6 @@ add_library(ft
   ft_chr.c ft_chr2.c ft_parse.c
   ft_io.c ft_io2.c
   ft_num.c ft_itoa.c ft_atoi.c ft_endian16.c ft_endian32.c ft_endian64.c
+  printf/ft_printf.c printf/parse.c printf/spec.c
   )
 target_include_directories(ft PUBLIC includes)
