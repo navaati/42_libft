@@ -32,7 +32,7 @@ static int	print_padding(int fd, t_params params, size_t num_len)
 	padding = params.min_width - num_len;
 	if (padding > 0)
 	{
-		ft_memset(buf, ' ', 256);
+		ft_memset(buf, params.zero ? '0' : ' ', 256);
 		while (printed < padding)
 		{
 			to_print = padding - printed > 256 ? 256 : padding - printed;

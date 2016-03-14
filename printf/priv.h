@@ -36,6 +36,7 @@ typedef enum				e_len_mod
 struct						s_params
 {
 	bool		alt;
+	bool		zero;
 	t_len_mod	len_modifier;
 	int			min_width;
 };

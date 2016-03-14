@@ -65,14 +65,25 @@ static bool	parse_specifier(t_parse_in fmt, t_spec_func *spec_func)
 	return (false);
 }
 
+bool		parse_flag(t_parse_in fmt, t_params *params)
+{
+	if (match_char(fmt, '#'))
+		params->alt = true;
+	else if (match_char(fmt, '0'))
+		params->zero = true;
+	else
+		return (false);
+	return (true);
+}
+
 bool		parse_conversion(t_parse_in fmt, t_params *params,
 								t_spec_func *spec_func)
 {
 	int			ret;
 
-	params->alt = false;
-	if (match_char(fmt, '#'))
-		params->alt = true;
+	*params = (t_params){ .alt = false, .zero = false };
+	while (parse_flag(fmt, params))
+		;
 	parse_nat(fmt, &params->min_width);
 	parse_len_modifier(fmt, &params->len_modifier);
 	ret = parse_specifier(fmt, spec_func);
