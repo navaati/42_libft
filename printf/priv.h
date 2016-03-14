@@ -37,6 +37,7 @@ struct						s_params
 {
 	bool		alt;
 	t_len_mod	len_modifier;
+	int			min_width;
 };
 
 typedef struct				s_specifier

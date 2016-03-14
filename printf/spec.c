@@ -21,6 +21,43 @@ static const char g_digits[16] = {
 	'a', 'b', 'c', 'd', 'e', 'f'
 };
 
+static int	print_padding(int fd, t_params params, size_t num_len)
+{
+	char	buf[256];
+	int		padding;
+	int		printed;
+	size_t	to_print;
+
+	printed = 0;
+	padding = params.min_width - num_len;
+	if (padding > 0)
+	{
+		ft_memset(buf, ' ', 256);
+		while (printed < padding)
+		{
+			to_print = padding - printed > 256 ? 256 : padding - printed;
+			if (!ft_fwrite(fd, buf, to_print))
+				return (-1);
+			printed += to_print;
+		}
+	}
+	return (printed);
+}
+
+static int	print_number(int fd, t_params params, char *buf, size_t len)
+{
+	int	padding;
+
+	if (len == 0)
+	{
+		buf = "0";
+		len = 1;
+	}
+	if ((padding = print_padding(fd, params, len)) < 0)
+		return (-1);
+	return (ft_fwrite(fd, buf, len) ? len + padding : -1);
+}
+
 static int	print_hex(int fd, t_params params, va_list ap)
 {
 	unsigned long	n;
@@ -40,10 +77,7 @@ static int	print_hex(int fd, t_params params, va_list ap)
 		buf[16 - len] = g_digits[n & 0xF];
 		n >>= 4;
 	}
-	if (len == 0)
-		return (ft_fwrite(fd, "0", 1) ? 1 : -1);
-	else
-		return (ft_fwrite(fd, &buf[16 - len], len) ? len : -1);
+	return (print_number(fd, params, &buf[16 - len], len));
 }
 
 static int	print_string(int fd, t_params params, va_list ap)

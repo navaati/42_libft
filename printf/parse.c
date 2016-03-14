@@ -14,6 +14,22 @@
 
 #include "priv.h"
 
+static bool	parse_nat(t_parse_in fmt, int *n)
+{
+	bool	ret;
+	char	c;
+
+	*n = 0;
+	ret = false;
+	while (match_chars(fmt, "0123456789", &c))
+	{
+		ret = true;
+		*n *= 10;
+		*n += c - '0';
+	}
+	return (ret);
+}
+
 static bool	parse_len_modifier(t_parse_in fmt, t_len_mod *len_modifier)
 {
 	*len_modifier = LEN_MOD_NONE;
@@ -57,6 +73,7 @@ bool		parse_conversion(t_parse_in fmt, t_params *params,
 	params->alt = false;
 	if (match_char(fmt, '#'))
 		params->alt = true;
+	parse_nat(fmt, &params->min_width);
 	parse_len_modifier(fmt, &params->len_modifier);
 	ret = parse_specifier(fmt, spec_func);
 	return (ret);
