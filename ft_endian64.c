@@ -21,22 +21,22 @@ static uint64_t	invert64(uint64_t x)
 	return (x << 32 | x >> 32);
 }
 
-uint64_t		htobe64(uint64_t x)
+uint64_t		ft_htobe64(uint64_t x)
 {
 	HTOBE(64);
 }
 
-uint64_t		htole64(uint64_t x)
+uint64_t		ft_htole64(uint64_t x)
 {
 	HTOLE(64);
 }
 
-uint64_t		be64toh(uint64_t x)
+uint64_t		ft_be64toh(uint64_t x)
 {
 	HTOBE(64);
 }
 
-uint64_t		le64toh(uint64_t x)
+uint64_t		ft_le64toh(uint64_t x)
 {
 	HTOLE(64);
 }

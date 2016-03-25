@@ -22,22 +22,22 @@ static uint32_t	invert32(uint32_t x)
 			(x << 24 & 0xff000000));
 }
 
-uint32_t		htobe32(uint32_t x)
+uint32_t		ft_htobe32(uint32_t x)
 {
 	HTOBE(32);
 }
 
-uint32_t		htole32(uint32_t x)
+uint32_t		ft_htole32(uint32_t x)
 {
 	HTOLE(32);
 }
 
-uint32_t		be32toh(uint32_t x)
+uint32_t		ft_be32toh(uint32_t x)
 {
 	HTOBE(32);
 }
 
-uint32_t		le32toh(uint32_t x)
+uint32_t		ft_le32toh(uint32_t x)
 {
 	HTOLE(32);
 }

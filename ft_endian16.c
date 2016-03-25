@@ -19,22 +19,22 @@ static uint16_t	invert16(uint16_t x)
 	return (x << 8 | x >> 8);
 }
 
-uint16_t		htobe16(uint16_t x)
+uint16_t		ft_htobe16(uint16_t x)
 {
 	HTOBE(16);
 }
 
-uint16_t		htole16(uint16_t x)
+uint16_t		ft_htole16(uint16_t x)
 {
 	HTOLE(16);
 }
 
-uint16_t		be16toh(uint16_t x)
+uint16_t		ft_be16toh(uint16_t x)
 {
 	HTOBE(16);
 }
 
-uint16_t		le16toh(uint16_t x)
+uint16_t		ft_le16toh(uint16_t x)
 {
 	HTOLE(16);
 }
