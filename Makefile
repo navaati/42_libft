@@ -11,8 +11,9 @@ all: $(CMAKE_TREE)
 clean: $(CMAKE_TREE)
 	cmake --build $(BUILD_DIR) --target clean
 
-re: $(CMAKE_TREE)
-	cmake --build $(BUILD_DIR) --clean-first
+re:
+	$(MAKE) fclean
+	$(MAKE) all
 
 fclean:
 	rm -rf $(BUILD_DIR)
